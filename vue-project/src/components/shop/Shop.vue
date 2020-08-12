@@ -1,4 +1,3 @@
-
 <template>
     <div>
        <MenuList/>
@@ -14,6 +13,9 @@ import ShopInfo from '@/components/shop/ShopInfo';
 
 export default {
     name : 'Shop',
+    computed: {
+        
+    },    
     components: {
         MenuList,
         RatingList,

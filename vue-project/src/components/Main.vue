@@ -1,7 +1,7 @@
 <template>
     <div id="main">
         <span>{{ title }}</span><br/>
-        <router-link to="/shop"><button id="moveBtn">페이지 이동</button></router-link>
+        <router-link to="`/shop/`"><button id="moveBtn">페이지 이동</button></router-link>
     </div>
 </template>
 
@@ -11,7 +11,8 @@ export default {
     data() {
         return {
             title: '안녕하세요',
-            count : 1
+            count : 1,
+            country1 : 'usa'
         }
     },
     // methods: {

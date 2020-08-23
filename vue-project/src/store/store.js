@@ -1,31 +1,33 @@
-import Vue from "vuex";
+import Vue from 'vue'
 import Vuex from "vuex";
-import axios from "axios";
-import { SERVER_URL, GET_COUNTRIES, GET_COUNTRY } from "@/common/api.js";
 
 Vue.use(Vuex);
 
-export const store = new Vuex.store({
+export default {
+  // actions -> mutations -> state
   state: {
-    country: null,
+    todo: [
+      {
+        id: 1,
+        text: 'buy a car',
+        checked: false
+      },
+      {
+        id: 2,
+        text: 'play game',
+        checked: false
+      },
+    ]
   },
-  getters: {},
+  // 데이터를 바꾸는 곳
   mutations: {
-    GLOBALSTATUS(state) {},
-    // COUNTRYSTATUS(state, { country }) {
-    //   this.country = country;
-    // },
+
   },
+  // 함수 (비동기적 처리)
   actions: {
-    GLOBALSTATUS({ commit }, { email, password }) {
-      return axios
-        .get(`${SERVER_URL}${GET_COUNTRIES}`)
-        .then(({ data }) => commit("GLOBALSTATUS", data));
-    },
-    // COUNTRYSTATUS({ commit }, { country }) {
-    //   return axios
-    //     .get(`${SERVER_URL}${GET_COUNTRIES}/{country}`, { country })
-    //     .then(({ data }) => commit("COUNTRYSTATUS", data));
-    // },
+
   },
-});
+  getters: {
+
+  }
+}

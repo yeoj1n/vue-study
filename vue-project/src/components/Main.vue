@@ -1,7 +1,7 @@
 <template>
     <div id="main">
-        <span>{{ title }}</span><br/>
-        <router-link to="`/shop/`"><button id="moveBtn">페이지 이동</button></router-link>
+        // <span>{{ title }}</span><br/>
+        <router-link to="`/covid/all`"><button id="moveBtn">COVID 19</button></router-link>
     </div>
 </template>
 
@@ -15,18 +15,6 @@ export default {
             country1 : 'usa'
         }
     },
-    // methods: {
-    //     add : function() {
-    //         this.count ++
-    //     },
-    //     sub : function() {
-    //         this.count --
-    //     }
-    // },
-    /*
-    // computed : 데이터 캐싱 기능, 참고하는 속성값(ex)title)이 있는 경우는 렌더링되며 값이 변경되지만 
-    ..new Date() 등과 같이 참고할 속성값이 없는 경우 렌더링과 관련이 없어 캐싱된 값이 그대로 출력되기 때문에 값이 변하지 않는다. 
-    */
     computed : {
         reverseMsg : function() {
             return this.title.split('').reverse().join('')
